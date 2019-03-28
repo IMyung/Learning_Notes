@@ -172,7 +172,7 @@
     type:nth-of-type( number ) { ... }
   ```
   + *n-th of type*
-  + 對所有某標籤的第 n 個元素進行套用
+  + 對某標籤的第 n 個元素進行套用
 
 
 ---
@@ -184,3 +184,8 @@
   ID > class > tag > body
   ```
   + Specificity Calculator（ 優先級計算器，參考 ）：https://specificity.keegan.st/
+
+
+---
+
+**L53、54：CSS practices & sol**

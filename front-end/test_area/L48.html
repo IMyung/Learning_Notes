@@ -2,20 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
-    <link rel="stylesheet" href="L48.css">
+    <title>TTT practice</title>
+    <style>
+        #text {
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        td {
+            width:100px;
+            height:100px;
+        }
+        .vertical {
+            border-left: 1px black solid;
+            border-right: 1px black solid;
+        }
+
+        .horizon {
+            border-top: 1px black solid;
+            border-bottom: 1px black solid;
+        }
+    </style>
 </head>
 <body>
-    <h1>TO do List </h1>
-
-    <h4>hello</h4>
-
-    <ul>
-        <li>123</li>
-        <li>456</li>
-        <li>789</li>
-    </ul>
-
-    <li>外部 li</li>
+    <table>
+        <h1 id="text">Tic Toc Tok</h1>
+        <tr>
+            <td></td>
+            <td class="vertical"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="horizon"></td>
+            <td class="vertical horizon"></td>
+            <td class="horizon"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="vertical"></td>
+            <td></td>
+        </tr>
+    </table>
 </body>
 </html>

@@ -1,37 +1,101 @@
-**L43：CSS 三個存放方法**
+**L57：Text and fonts**
 
-* inline：
-  非常不推薦！直接寫在某標籤 <> 內部，結構十分僵化不易更改
-  另外是也會造成 html 結構和 css 的修飾混亂在同一個頁面當中<br/><br/>
-
-* head 當中的 < style >  < /style >：
-  ```js
-  <head>
-        < style type = "text/css" >
-            selector {
-                property : value;
-            }
-        </style>
-  </head>
+* ```js
+  selector {
+        font-family : font;
+  }
   ```
+  + 設定字型
+  + 瀏覽器字體可用性參考：https://goo.gl/FfXqJh
+  + < p > 假文句產生器：https://goo.gl/8VBnvZ
+  <br/><br/>
 
-  + 結構比 inline 清晰，但一般使用 html、css 檔案分離的設計
-  + < style >：補上 type = "text/css" 是宣告文件型態
-  + 修飾句子的末尾記得要加上分號 ; <br/><br/>
+* ```js
+  selector {
+        font-size : ...unit;
+  }
 
-* external： 
-  把 css 要修飾的內容獨立在多個 .css 檔案後
-  利用 < link > 標籤當中的 href 屬性進行外部引入
-  ```js
-  <head>
-        <link rel="stylesheet" type="text/css" href="...">
-  </head>
+  注意： unit 和數字間不能有空隙
   ```
+  + 設定字體大小
+  + px 
+  + <font color="#FF0000"><b>em 動態大小字體</b></font>
+    + 當前區段字體大小的 n 倍
+    + 下圖示範 em 的使用
+      因此範例中的 To do List 為 body 的預設大小
+      p 為預設字體大小的兩倍，而 span 又是 p 的兩倍，動態大小字體<br/>
+  + 設計思路
+    + 先利用 body 對其設定全域字體大小再設定各個標籤
+
+    @import "../img/6_57_1.png"
+    @import "../img/6_57_2.png"<br/><br/>
 
 ---
 
-**L45：CSS property：color**
+**L58：More text and fonts**
 
-* 一般不會直接使用顏色名字，如：red、blue
-  且通常在幫別人接案設計時，都會有指定的色系表現
-  // 顏色展示參考：http://colours.neilorangepeel.com/<br/><br/>
+* ```js
+  selector {
+        font-weight : ...;
+  }
+  ```
+  + 字體粗細度
+  + normal、bold....
+  + 映射到數字大小：細 100 - 800 粗
+  <br/><br/>
+
+* ```js
+  selector {
+        line-height : ...;
+  }
+  ```
+  + 字段間距
+  <br/><br/>
+
+* ```js
+  selector {
+        text-align : ...;
+  }
+  ```
+  + 字段對齊
+  + right、center、right
+  <br/><br/>
+
+* ```js
+  selector {
+        text-decoration : ...;
+  }
+  ```
+  + 劃線
+  + underline、strike、line-through
+  <br/><br/>
+
+---
+
+**L59：Note about google font**
+
+* google font：https://fonts.google.com/
+
+---
+
+**L59：Note about google font**
+
+* 若採用 L57 提及系統內建字體，會有不一定能使用的問題
+  也不見得比較好看以及授權的問題，因此可以採用 google 字體
+  <br/>
+* google font：https://fonts.google.com/
+
+---
+
+**L61：Introduction to box model**
+
+* In a document, each element is represented as a rectangular box
+
+* In CSS, each of these rectangular boxes is described using the standard box model.
+  
+* Each box has four edges: the margin edge, border edge, padding edge, and content edge.
+
+@import "../img/6_61_1.png"
+
+// 筆記沒做好，再從頭看
+
