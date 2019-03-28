@@ -113,3 +113,48 @@
 
    4. 停止運行該臨時容器
    ```
+
+---
+
+**L33：Rebuild with cache**
+
+@import "../img/3_33_1.png"
+
+* 若重新執行 docker build . 並不會花什麼代價
+  而是從 local cache 使用創建容器過程中所產生的 image
+  <br/>
+* 但因 Dockerfile 文件指令會依照前指令產生的 image 進行創建
+ 那麼當然若重新調整執行順序，<font color="#FF0000">則都要重新下載和安裝</font>
+  + eg 課程中新增兩個 RUN 指令
+    把順序調換，往後的所有指令全部重新執行流程
+
+---
+
+**L34：Tagging an image**
+
+```
+docker build -t Docker_ID/image_name:version_tag .
+```
+
+@import "../img/3_34_1.png"
+
+* 創建過程最後一行會多一行提示
+* version_tag 沒有加上，系統自動默認 latest
+* 如 redis 是社區共同開發
+  不會加上 ID，直接就是輸入 image name 使用
+
+---
+
+**L35：Manual image generation with docker commit**
+
+不透過 Dockerfile 進行安裝
+```
+1. docker run -it alpine sh
+2. 在 alpine ssh 中下 apk install --update redis
+3. 開啟另一個 terminal 下 docker commit -c "CMD[redis-server]" 指令
+4. 產生一個 SHA256 的 image 哈希值
+```
+
+Note
+只是單純展示可行性，但是一般都還是透過 Dockerfile
+因為可以透過 Dockerfile 進行快速配置
