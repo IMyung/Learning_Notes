@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L192</title>
+    <style>
+        .div_1 {
+            background: skyblue;
+        }
+
+        .div_2 {
+            height: 30px;
+            background: orange;
+        }
+
+        .div_3 {
+            width: 300px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+        <!--
+            div 盒子
+
+            1. 默認 width：
+               // 自動將寬度拉到最大
+               // 沒自訂寬度前即便把瀏覽器寬度拉窄，依然自動顯示拉伸到最大的寬度
+
+
+            2. 默認 heigh：
+               // 默認值為 0 (什麼都不顯示)
+               // 可以由子元素將父元素高度撐起來(不設定高度的前提下)
+                  eg 若在內部輸入 12px 字體，則 div 高度也變成 12px
+
+               // 第二版本，（先用 chrome dev 查字高）
+                  若 div 有預設了高度，小於字體自高的顯示範圍
+                  則外部的文字會直接從 div 自動下文換行的地方開始顯示
+
+               // 第三版本
+                  即便把 div 區塊的寬度調窄
+                  後面一樣沒辦法寫東西，學習到後期其他技術才能調整
+                  （可以用dev查看，div框後面有系統隱藏的橘色框）
+
+
+            3. p 元素不能裝 block 元素（在一行的元素）
+               // 塊元素：
+                  前後元素會被換行的元素就叫塊元素
+                  h p ul ol dl li(list-item) form div body html
+
+               // 內聯元素：
+                  塊元素的差集
+        -->
+
+</body>
+
+    <div class="div_1">
+        <b>this is ver_1 div</b>
+    </div><br/>
+
+    <div class="div_2">
+        <b>
+            this is ver_2 div<br/>
+            line 2
+        </b>
+    </div>
+    123
+
+    <br/><br/><br>
+    <div class="div_3">
+        <b>
+            this is ver_3 div<br/>
+            line 2
+        </b>
+    </div>
+</html>

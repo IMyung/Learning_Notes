@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L219：數字</title>
+
+</head>
+<body>
+        <!--
+            數據類型：數字
+            
+            ＊不分整數和浮點數
+              範圍： -2 ^ 53  ~  2 ^ 53 
+        --> 
+        
+        <script>
+            // 數字對象
+                /*
+                    -  Number()：   轉換成數字類型（只接受能被轉換的數字）
+                    -    typeof：   類型辨認。注意後面不用任何括號
+                */    
+                    // alert( typeof "1234");
+                    // alert( Number("1234"));
+                
+
+                /*
+                    -  NaN：無法轉換成數字
+                    -  NaN 本身也為數字類型
+                    但 NaN == NaN is FALSE
+                    -  和 undefine 相加後，便會成為 NaN
+                */
+                    // alert( Number("1234abc"));   
+                    // alert( typeof NaN);
+                    // alert( NaN == NaN);
+
+                    // var num = 1 + undefined;
+                    // alert(num);
+
+
+                /*
+                    解析
+                    解析成數字，遇到不是數字的部分就停下來
+                    parseInt()
+                    parseFlaot()
+                */
+                    // alert(parseFloat("123.4567"));
+                    // alert(parseFloat("123.456.a.7"));
+                
+
+                /*
+                    四捨五入返回 n 位的「字符串」
+                */
+                    // var num = 2.3456;
+                    // alert(num.toFixed(2));
+                    // alert(typeof num.toFixed(2));
+
+            // Math對象
+                /*
+                    pow()
+                    round()：  四捨五入 
+                    ceil()
+                    floor
+                    max()：  不接受數組
+
+                    random()：  括號內部沒有任何值
+                */
+                    // alert(Math.random());
+
+
+            
+
+        </script>
+
+</body>
+</html>

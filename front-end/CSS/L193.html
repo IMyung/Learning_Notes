@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L192</title>
+    <style>
+        .div_1 {
+            /*width: 150px;*/
+            height: 150px;
+            background: #82c110;
+
+            /* 
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            */
+
+            /* 
+                簡寫（四個值）
+                上右下左（順時針）
+            */
+
+            /*  
+                簡寫（三個值）
+                上、水平、下
+            */
+
+            /*  
+                簡寫（兩個值）
+                垂直、水平
+            */
+
+            /*  
+                簡寫（一個值）
+                四個方向
+            */
+
+            margin: 20px 20px 20px 20px;
+        }
+
+        .div_2 {
+            width: 150px;
+            height: 150px;
+            background: #571DDE;
+
+            /*  
+                置中
+                寬度沒拉滿的 div 才能使用
+            */ 
+
+            margin: 20px auto 20px;
+
+        }
+
+        .icon {
+            margin-top: 500px;
+            margin-left: 500px;
+        }
+
+    </style>
+</head>
+<body>
+        <!--
+            外邊距
+            
+            * margin    top
+                      right
+                       left
+                     bottom
+                     // F12 到 dev 中顯示橘色的區域
+
+                     // 有 Width 就沒有右外邊距，因遵循前後元素都換行
+                        意指不設定 Width 就可以設置外邊距
+
+                     // 支持負數
+
+                     // 水平居中：左右 auto（內邊距沒有）
+
+            ＊ HTML 排列的方向，左上至右下，文檔流的形式
+
+            ＊ 內聯元素：沒垂直方向外邊距。但可以 margin-right 和 margin-left
+        -->
+
+        <div class="div_1">
+
+        </div>
+
+        <div class="div_2">
+          
+        </div>
+
+        <i class="icon">
+            我是內聯元素
+        </i>
+</body>
+</html>

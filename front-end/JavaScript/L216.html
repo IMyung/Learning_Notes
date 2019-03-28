@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L216：變量</title>
+</head>
+<body>
+        <!--
+            變量
+
+            1. 字母、數字、下滑線、＄  
+               // 數字不能當開頭
+
+            2. 所有變量必須使用 var 聲明才能使用
+
+            3. 若沒有賦值，系統會賦予成「 undefined型態 」
+        -->   
+
+         <!--
+            六大數據類型
+
+            // 原始數據類型
+            number     ----\>  包含浮點數
+            String
+            Boolean
+            function
+            undefined  ----\>  未定義，值就是 undefined
+
+            // 對象類型
+            Object
+        -->   
+
+        <script>
+            // 英文或下劃線開頭
+            var a123 = "2018";
+            var _321 = "2018";
+            
+            // $ 開頭
+            var $ = "123";
+            
+            // 簡寫
+            var a = 1;
+            var b = 2;
+            var c = 3;
+
+            var a = 1 , b = 2 , c = 3 ;
+
+            var a = 1,
+                b = 2,
+                c = 3;          // 注意最後一個元素為 ;
+
+            
+
+            var a = 1;
+            var b = 1.1;
+
+            var str = "This is str!";
+
+            var bool = true;
+
+            var fn = function(){ 
+                alert(1);
+            }
+            
+            // 就是 undefined 型態
+            var undefined_1;
+            alert(undefined_1)
+
+            // {} 就是一個空對象
+            // 類似 JSON 形式
+            // 前面的 "" 可以省略
+            alert({});
+            alert( {"abc":"123"} ) ;
+            alert( {abc:"123"});
+
+        </script>
+</body>
+</html>

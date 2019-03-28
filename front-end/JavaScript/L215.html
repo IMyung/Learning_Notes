@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L215：初識 JS</title>
+
+</head>
+<body>
+        <!--
+            JavaScript 特點
+
+            ＊Unicode字符集編寫。是 ASCII 和 Latin-1 超集
+
+            ＊規範
+              1. 區分大小寫
+              2. 分號結尾
+              3. 構造函數首字母大寫，再駝峰。函式首字母小寫，再駝峰
+
+            ＊引用方式
+              1. 內部（可以在head）
+              2. 外部（開頭和結尾標籤，中間不能寫任何代碼）
+              3. 標籤內部（難維護，不推薦）
+        
+              <script>
+                  
+              </script>
+
+              <script src="outterImport.js"></script>
+
+              <a href="javascript:void(0);" onclick="alert('還不趕快學')">內部標籤，請少用</a>
+        
+            ＊註解
+
+                //    單行
+              /**/    多行
+        -->
+        <span id="span_1">span label</span>
+
+        <div class="div_1"></div>
+        <div class="div_1"></div>
+        <div class="div_1"></div>
+
+        <ul class="list_1">
+          <li>123</li>
+          <li>234</li>
+          <li>345</li>
+        </ul>
+
+        <script>
+            /*
+                獲取節點元素：
+                - 透過 id 名字獲取，返回單個元素:
+                  document.getElementById("ID_name");    
+
+                - 透過 class 名字獲取，返回「集合」:
+                  document.getElementsByClassName("class_name");   
+                  // 只支援 IE 9 以上
+
+                  -- 尾段 + .length ： 返回長度
+
+                  -- 取集合中的其中一個元素
+                     document.getElementsByClassName("class_name")[index_val];
+
+                  -- 變量聲明為 var
+                
+                - 透過 tag 名字獲取，返回「集合」:
+                  class_name.getElementsByTagName(li);
+
+                Note:
+                1. document 是一個內置對象，代表整個網頁所有標籤
+                2. Element「s」表示返回的是一個集合
+            */
+
+            //alert(document.getElementById("span_1"));
+
+            //alert(document.getElementsByClassName("div_1"));
+            //alert(document.getElementsByClassName("div_1").length);
+
+            //alert(document.getElementsByClassName("list_1")[0]);
+
+            // var list_var = document.getElementsByClassName("list_1")[0];
+            // alert(list_var.getElementsByTagName("li").length);
+            
+            /*
+                修改元素內容
+            */
+
+            var box = document.getElementById("span_1");
+
+            // 改變了前面 span 標籤內部內容
+            // box.innerHTML = "This is JS!";
+
+            // 解析文本內部意涵：   .innerHTML
+            // 若想顯示內容中的 "" 符號：利用反斜線 \ 
+            // box.innerHTML = "This is JS! <a href=\"http://www.baidu.com\">跳轉百度</a>";
+
+            // 不解析文本內部意涵： .innerText
+            // box.innerText = "This is JS! <a href=\"http://www.baidu.com\">跳轉百度</a>";
+
+            // 拼接在標籤後，不覆蓋
+            box.innerText += " + 拼接的內容";
+
+        </script>
+</body>
+</html>

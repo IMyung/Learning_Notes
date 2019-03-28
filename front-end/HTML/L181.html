@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L181</title>
+</head>
+<body>
+    <!--
+            圖片標簽
+
+            1. BMP  ：點陣圖，佔用空間大色彩豐富
+            2. JPEG ：壓縮格式，失真。網頁常用
+            3. GIF  ：靜止圖或動畫，支持透明背景。網上很多小動畫都是此
+            4. PNG  ：無損壓縮，支持alpha通道的透明半透明特性
+    -->
+
+    <!--
+            src 路徑可以為網頁，絕對或相對路徑
+                //本地路徑打法
+                  ＊絕對路徑
+                  ＊相對路徑
+                    // 同層級資料夾：只要打出打名即可
+                       下一級資料夾：./
+                       上一級資料夾：../
+
+            alt 圖片描述信息
+                // 圖片引用不成功的時候就會顯示此訊息
+                // 網路圖片用 alt 來對應圖片的實際名稱
+
+            width
+            height
+                //建議直接寫上
+                //否則瀏覽器還要花時間去實質解析圖片大小
+
+            title
+                //滑鼠移到圖片上會顯示的文字
+
+            圖片跳轉網頁地址：
+                // 外面再嵌套 <a>
+
+    -->
+
+    <a href="http://www.pku.edu.cn">
+        <img src="./testElements/img/imgTest.jpg" alt="湯姆和傑利"width="480" height="360" title="Tom & Jerry">
+    </a>
+
+
+
+</body>
+</html>
+

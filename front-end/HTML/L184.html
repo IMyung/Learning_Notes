@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L184 表單域</title>
+</head>
+<body>
+        <!--
+            表單域
+            格式：
+                    <form action="">
+
+                    </form>
+
+                    // action = ""  代表要發送到哪個頁面
+                    // action = "#" 只會提交「當前表單」
+
+            輸入框：
+                <input type="text">
+                type 種類
+                    text：預設，明文輸入框
+                    password：密文輸入
+                    radio：單選按鈕
+                        //若要使兩個單選按鈕互斥選擇
+                          則要在後面加上 name ="tag_name"
+                        //相同的 tag_name 才會綁定再一起
+
+                    checkbox：勾選框
+                    submit：提交按鈕
+                        // 用 value  = "" 更改按鈕內部文字
+        -->
+
+        <form action="#">
+            version 1<br/><br/>
+            帳號：<input type="text">         <br/><br/>
+            密碼：<input type="password">     <br/><br/>
+
+            性別：<input type="radio" name="gender"> 男
+                 <input type="radio" name="gender"> 女     <br/><br/>
+
+            興趣：
+                <input type="checkbox"> 跑步
+                <input type="checkbox"> 打球
+                <input type="checkbox"> 看書
+                <input type="checkbox"> 購物 <br/>
+
+            <input type="submit" value="ok!!!">
+
+        </form><br/><br/><br/>
+
+
+        <!--
+            ＊上一個版本中按下提交按鈕
+              URL從原本的 xxx.html 多了?gender=on#
+              但是其他選項的參數似乎就都沒有出現
+              那麼會出現 gender 是否是因為採用了 name = "gender"？
+              所以嘗試在其他標籤裡面使用 name = ""
+              而性別因為必須得綁定，所以可以再使用 value = "" 綁定特定值
+
+              提交後的範例：
+                  ?account=123&password=123&gender=man&basketball=on#
+
+
+            ＊而若 URL 有？，表示是個 GET 請求
+              可以在 <form action="#"> method = "" 中更改
+              // 沒有寫就是預設 GET
+              // POST是隱式請求，網頁提交刷新後不會出現提交內容明文
+
+
+        -->
+
+        <form action="#" method="POST">
+            version 2<br/><br/>
+            帳號：<input type="text" name="account">         <br/><br/>
+            密碼：<input type="password" name="password">     <br/><br/>
+
+            性別：<input type="radio" name="gender" value="man"> 男
+                 <input type="radio" name="gender" value="woman"> 女     <br/><br/>
+
+            興趣：
+                <input type="checkbox" name="running"> 跑步
+                <input type="checkbox" name="basketball"> 打球
+                <input type="checkbox" name="reading"> 看書
+                <input type="checkbox" name="shopping"> 購物 <br/>
+
+            <input type="submit" value="ok!!!">
+
+        </form>
+
+
+
+</body>
+</html>

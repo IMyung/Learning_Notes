@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L217：JS 事件</title>
+    <style>
+        #div_1 {
+             width: 300px;
+            height: 300px;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+        <!--
+            事件
+ｂ
+        -->   
+
+        <div id="div_1"></div>
+        
+        <script>
+            // 取得對象
+            /* 若要透過 document.getElementsByClass 取出集合
+               必定要取出單個元素，才可以綁定事件 */
+            var div_obj = document.getElementById("div_1");
+
+            // 點擊事件
+                // 鼠標單擊
+                div_obj.onclick = function(){
+                    alert("被點擊了！！！");
+                }
+                
+                // 左鍵「雙」擊： ondbclick
+
+            // 鼠標事件
+                // 滑入事件： onmouseenter / onmouseover 
+                // 後面會再講解 enter 和 over 的細節差異
+                div_obj.onmouseover = function(){
+                    console.log("----- 鼠標滑入 -----");
+                }
+
+                // 滑出事件： onmouseleave / onmouseout
+                div_obj.onmouseout = function(){
+                    console.log("----- 鼠標滑出 -----");
+                }
+
+                // 鼠標移動： onmousemove
+
+            // 鍵盤事件
+                // 只限定能被輸入內容的元素
+
+                // 按下某鍵： onkeydown
+                // 抬起某鍵： onkeyup
+                // 失去焦點： onblur
+                // 得到焦點： onfocus
+            
+            // 窗口
+                // 窗口大小被改變
+                window.onresize = function(){
+                    console.log("出口大小被改變");
+                }
+
+        </script>
+</body>
+</html>

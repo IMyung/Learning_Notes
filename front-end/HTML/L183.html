@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L183</title>
+</head>
+<body>
+        <!--
+            表格
+
+            <table>：表格
+            border  = "" ：框線寬度
+            <thead>：表格 meta 值欄位
+            <tbody>：實際數值欄位
+                // 不一定要寫這兩個標籤，
+                   主要是企業拿來方便做樣式調整
+
+
+            <tr>：一列
+            <td>：一行
+                // <td><<b> 想要加粗的內容 </b></td> -> <th>
+
+            rowspan = "" ：「由上至下」合併的列數
+            colspan = "" ：「由左至右」合併的行數
+            caption：表格名稱（預設置中）
+        -->
+
+        <table border="1">
+            <caption>九宮格</caption>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年齡</th>
+                    <th>身高</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+
+                <tr>
+                    <td>444</td>
+                    <td>555</td>
+                    <td>666</td>
+                </tr>
+                <tr>
+                    <td>777</td>
+                    <td>888</td>
+                    <td>999</td>
+                </tr>
+            </tbody>
+        </table><br/><br/>
+
+        <table border="1">
+            <tr>
+                <td colspan="2">111</td>
+                <td>222</td>
+            </tr>
+            <tr>
+                <td>444</td>
+                <td>555</td>
+                <td rowspan="2">666</td>
+            </tr>
+            <tr>
+                <td>777</td>
+                <td>888</td>
+            </tr>
+        </table><br/><br/>
+</body>
+</html>
