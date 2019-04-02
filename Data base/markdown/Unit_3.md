@@ -20,7 +20,7 @@ CREATE DATABASE DB_Nmae;
 **L26：Dropping Databases**
 
 ```SQL
-DROP database DB_Nmae;
+DROP DATABASE DB_Nmae;
 
 // 刪除一個 DB
 ```

@@ -80,3 +80,23 @@ WHERE condition ;
 
 **L85：Intro to DELETE**
 
+```SQL
+DELETE FROM table_name WHERE condition;
+
+// 刪除某筆資料
+```
+
+```SQL
+DELETE FROM table_name;
+
+// 刪除整個 table
+```
+
+* 和 DROP 不同在於：DROP 會連整個表格都刪除
+  但是 DELETE 只會把內部 entries 刪除，但表格還是存在
+
+---
+
+**L81-4：小練習**
+
+---
